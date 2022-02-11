@@ -26,10 +26,10 @@ public class User {
     String firstName;
     @Column(name = "Last_Name",nullable = false)
     String lastName;
-    @Column(name = "Mobile_Number",nullable = false,unique = true)
+    @Column(name = "Mobile_Number",nullable = false,unique = true,updatable = false)
     String  mobileNumber;
     @Column(name = "Email_Id",nullable = false,unique = true)
-    String emailID;
+    String emailId;
     @Column(name = "Password",nullable = false)
     String password;
     @Column(name = "Address_1",nullable = false)

@@ -42,7 +42,7 @@ public class UserService {
                     .badRequest()
                     .body(new MessageResponse("Error: Username already Exist.Try different Username"));
         }
-        if(userRepository.findByEmailID(user.getEmailID())!=null){
+        if(userRepository.findByEmailId(user.getEmailId())!=null){
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Email already Exist.Try different Email"));
