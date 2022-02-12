@@ -91,6 +91,17 @@ public class TransactionService {
 
         return ResponseEntity.ok(new MessageResponse("Transaction Successfull"));
 
+    }
 
+    public ResponseEntity<?> viewTransactionById(int txnId){
+        Transaction transaction = transactionRepository.findById(txnId).orElse(null);
+
+        if(transaction==null){
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: Transaction not exist"));
+        }
+
+        return ResponseEntity.ok(transaction);
     }
 }

@@ -4,10 +4,7 @@ import org.paytm.milestone2._Milestone2.DTO.Request.TransactionP2pRequestBody;
 import org.paytm.milestone2._Milestone2.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TransactionController {
@@ -18,5 +15,10 @@ public class TransactionController {
     @RequestMapping(value = "/transaction", method = RequestMethod.POST)
     public ResponseEntity<?> transactionP2P(@RequestBody TransactionP2pRequestBody transactionP2pRequestBody){
         return transactionService.transactionP2P(transactionP2pRequestBody);
+    }
+
+    @RequestMapping(value = "/transaction", method = RequestMethod.GET)
+    public ResponseEntity<?> viewTransactionById(@RequestParam("txnId") Integer txnId){
+        return transactionService.viewTransactionById(txnId);
     }
 }
