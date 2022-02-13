@@ -21,4 +21,9 @@ public class TransactionController {
     public ResponseEntity<?> viewTransactionById(@RequestParam("txnId") Integer txnId){
         return transactionService.viewTransactionById(txnId);
     }
+
+    @RequestMapping(value = "/transaction/{userId}", method = RequestMethod.GET)
+    public ResponseEntity<?> viewTransactionByUserId(@PathVariable Integer userId, @RequestParam("pageNo") Integer pageNo){
+        return transactionService.viewTransactionByUserId(userId,pageNo);
+    }
 }

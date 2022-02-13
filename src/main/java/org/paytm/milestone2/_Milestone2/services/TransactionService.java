@@ -9,10 +9,12 @@ import org.paytm.milestone2._Milestone2.repository.TransactionRepository;
 import org.paytm.milestone2._Milestone2.repository.UserRepository;
 import org.paytm.milestone2._Milestone2.repository.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-
 import java.sql.Timestamp;
 
 @Service
@@ -103,5 +105,34 @@ public class TransactionService {
         }
 
         return ResponseEntity.ok(transaction);
+    }
+
+    public ResponseEntity<?> viewTransactionByUserId(int userId,int pageNo){
+
+        User user = userRepository.findById(userId).orElse(null);
+
+        if(user==null){
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: No user found"));
+        }
+
+        if(user.getUserName().compareTo(getUserNameFromToken())!=0){
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: Unauthorized User"));
+        }
+
+        Pageable pageable =  PageRequest.of(pageNo,2);
+
+        Page<Transaction> transactionsWithPagination = transactionRepository.findByPayerMobileNumberOrPayeeMobileNumber(user.getMobileNumber(),user.getMobileNumber(),pageable);
+
+        if(transactionsWithPagination==null){
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: No transaction found"));
+        }
+
+        return ResponseEntity.ok(transactionsWithPagination.getContent());
     }
 }
