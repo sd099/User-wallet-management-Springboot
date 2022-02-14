@@ -2,6 +2,7 @@ package org.paytm.milestone2._Milestone2.services;
 
 import org.paytm.milestone2._Milestone2.DTO.Request.TransactionP2pRequestBody;
 import org.paytm.milestone2._Milestone2.DTO.Response.MessageResponse;
+import org.paytm.milestone2._Milestone2.Kafka.Producer;
 import org.paytm.milestone2._Milestone2.models.Transaction;
 import org.paytm.milestone2._Milestone2.models.User;
 import org.paytm.milestone2._Milestone2.models.Wallet;
@@ -20,6 +21,8 @@ import java.sql.Timestamp;
 @Service
 public class TransactionService {
 
+    @Autowired
+    Producer producer;
     @Autowired
     UserRepository userRepository;
     @Autowired
@@ -90,6 +93,8 @@ public class TransactionService {
         newTransaction.setTimestamp(new Timestamp(System.currentTimeMillis()));
 
         transactionRepository.save(newTransaction);
+
+        producer.publishToTransactionTopic(transactionP2pRequestBody.getAmount()+" Amount transferred from "+payerWallet.getMobileNumber()+" to "+payeeWallet.getMobileNumber());
 
         return ResponseEntity.ok(new MessageResponse("Transaction Successfull"));
 

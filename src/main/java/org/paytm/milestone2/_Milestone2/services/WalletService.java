@@ -3,6 +3,7 @@ package org.paytm.milestone2._Milestone2.services;
 import org.paytm.milestone2._Milestone2.DTO.Request.AddMoneyRequestBody;
 import org.paytm.milestone2._Milestone2.DTO.Request.WalletCreationRequestBody;
 import org.paytm.milestone2._Milestone2.DTO.Response.MessageResponse;
+import org.paytm.milestone2._Milestone2.Kafka.Producer;
 import org.paytm.milestone2._Milestone2.models.User;
 import org.paytm.milestone2._Milestone2.models.Wallet;
 import org.paytm.milestone2._Milestone2.repository.UserRepository;
@@ -14,6 +15,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class WalletService {
+
+    @Autowired
+    Producer producer;
 
     @Autowired
     UserRepository userRepository;
@@ -50,6 +54,10 @@ public class WalletService {
         newWallet.setCurrentBalance(0.0F);
         newWallet.setMobileNumber(walletCreationRequestBody.getMobileNumber());
         walletRepository.save(newWallet);
+
+        String msg = "Wallet created successfully for userId" + user.getUserId();
+        producer.publishToWalletTopic(msg);
+
         return ResponseEntity.ok(new MessageResponse("Wallet Created Successfully!!"));
 
     }
