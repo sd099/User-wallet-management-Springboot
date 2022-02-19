@@ -30,12 +30,7 @@ public class TransactionService {
     @Autowired
     TransactionRepository transactionRepository;
 
-    public String getUserNameFromToken(){
-        String UserName = SecurityContextHolder.getContext().getAuthentication().getName();
-        return UserName;
-    }
-
-    public ResponseEntity<?> transactionP2P(TransactionP2pRequestBody transactionP2pRequestBody){
+    public ResponseEntity<?> transactionP2P(TransactionP2pRequestBody transactionP2pRequestBody,String userNameFromToken){
         User payerName = userRepository.findByMobileNumber(transactionP2pRequestBody.getPayerMobileNumber());
 
         if(payerName==null){
@@ -44,7 +39,7 @@ public class TransactionService {
                     .body(new MessageResponse("Error: Payer User Not Found with this Mobile Number"));
         }
 
-        if(payerName.getUserName().compareTo(getUserNameFromToken())!=0){
+        if(payerName.getUserName().compareTo(userNameFromToken)!=0){
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Unauthorized User"));
@@ -112,7 +107,7 @@ public class TransactionService {
         return ResponseEntity.ok(transaction);
     }
 
-    public ResponseEntity<?> viewTransactionByUserId(int userId,int pageNo){
+    public ResponseEntity<?> viewTransactionByUserId(int userId,int pageNo,String userNameFromToken){
 
         User user = userRepository.findById(userId).orElse(null);
 
@@ -122,7 +117,7 @@ public class TransactionService {
                     .body(new MessageResponse("Error: No user found"));
         }
 
-        if(user.getUserName().compareTo(getUserNameFromToken())!=0){
+        if(user.getUserName().compareTo(userNameFromToken)!=0){
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Unauthorized User"));

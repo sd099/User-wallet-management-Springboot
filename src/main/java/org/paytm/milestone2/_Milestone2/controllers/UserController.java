@@ -31,9 +31,4 @@ public class UserController {
     public ResponseEntity<?> signInUser(@RequestBody SignInRequestBody signInRequestBody){
         return userService.signInUser(signInRequestBody);
     }
-
-    @RequestMapping("/hello")
-    public String hello(){
-        return "Hello User!!!!";
-    }
 }

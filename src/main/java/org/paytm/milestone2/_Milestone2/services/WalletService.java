@@ -24,12 +24,7 @@ public class WalletService {
     @Autowired
     WalletRepository walletRepository;
 
-    public String getUserNameFromToken(){
-        String UserName = SecurityContextHolder.getContext().getAuthentication().getName();
-        return UserName;
-    }
-
-    public ResponseEntity<?> createWallet(WalletCreationRequestBody walletCreationRequestBody){
+    public ResponseEntity<?> createWallet(WalletCreationRequestBody walletCreationRequestBody,String userNameFromToken){
 
         User user = userRepository.findByMobileNumber(walletCreationRequestBody.getMobileNumber());
 
@@ -39,7 +34,7 @@ public class WalletService {
                     .body(new MessageResponse("Error: User Not Found with this Mobile Number"));
         }
 
-        if(user.getUserName().compareTo(getUserNameFromToken())!=0){
+        if(user.getUserName().compareTo(userNameFromToken)!=0){
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Unauthorized User"));
@@ -62,7 +57,7 @@ public class WalletService {
 
     }
 
-    public ResponseEntity<?> addMoneyIntoWallet(AddMoneyRequestBody addMoneyRequestBody){
+    public ResponseEntity<?> addMoneyIntoWallet(AddMoneyRequestBody addMoneyRequestBody,String userNameFromToken){
 
         User user = userRepository.findByMobileNumber(addMoneyRequestBody.getMobileNumber());
 
@@ -72,7 +67,7 @@ public class WalletService {
                     .body(new MessageResponse("Error: User Not Found with this Mobile Number"));
         }
 
-        if(user.getUserName().compareTo(getUserNameFromToken())!=0){
+        if(user.getUserName().compareTo(userNameFromToken)!=0){
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Unauthorized User"));
