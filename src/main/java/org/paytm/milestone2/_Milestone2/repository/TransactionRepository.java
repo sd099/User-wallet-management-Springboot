@@ -5,6 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface TransactionRepository extends JpaRepository<Transaction,Integer> {
-    Page<Transaction> findByPayerMobileNumberOrPayeeMobileNumber(String payerNum, String payeeNum, Pageable pageable);
+    List<Transaction> findByPayerMobileNumberOrPayeeMobileNumber(String payerNum, String payeeNum, Pageable pageable);
 }

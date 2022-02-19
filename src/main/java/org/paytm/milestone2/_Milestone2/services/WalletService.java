@@ -17,9 +17,6 @@ import org.springframework.stereotype.Service;
 public class WalletService {
 
     @Autowired
-    Producer producer;
-
-    @Autowired
     UserRepository userRepository;
     @Autowired
     WalletRepository walletRepository;
@@ -49,9 +46,6 @@ public class WalletService {
         newWallet.setCurrentBalance(0.0F);
         newWallet.setMobileNumber(walletCreationRequestBody.getMobileNumber());
         walletRepository.save(newWallet);
-
-        String msg = "Wallet created successfully for userId" + user.getUserId();
-        producer.publishToWalletTopic(msg);
 
         return ResponseEntity.ok(new MessageResponse("Wallet Created Successfully!!"));
 

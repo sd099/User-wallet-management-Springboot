@@ -17,12 +17,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Service
 public class TransactionService {
 
-    @Autowired
-    Producer producer;
     @Autowired
     UserRepository userRepository;
     @Autowired
@@ -89,8 +88,6 @@ public class TransactionService {
 
         transactionRepository.save(newTransaction);
 
-        producer.publishToTransactionTopic(transactionP2pRequestBody.getAmount()+" Amount transferred from "+payerWallet.getMobileNumber()+" to "+payeeWallet.getMobileNumber());
-
         return ResponseEntity.ok(new MessageResponse("Transaction Successfull"));
 
     }
@@ -125,7 +122,8 @@ public class TransactionService {
 
         Pageable pageable =  PageRequest.of(pageNo,2);
 
-        Page<Transaction> transactionsWithPagination = transactionRepository.findByPayerMobileNumberOrPayeeMobileNumber(user.getMobileNumber(),user.getMobileNumber(),pageable);
+        List<Transaction> transactionsWithPagination = transactionRepository.findByPayerMobileNumberOrPayeeMobileNumber(user.getMobileNumber(),user.getMobileNumber(),pageable);
+
 
         if(transactionsWithPagination==null){
             return ResponseEntity
@@ -133,6 +131,6 @@ public class TransactionService {
                     .body(new MessageResponse("Error: No transaction found"));
         }
 
-        return ResponseEntity.ok(transactionsWithPagination.getContent());
+        return ResponseEntity.ok(transactionsWithPagination);
     }
 }

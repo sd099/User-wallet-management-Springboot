@@ -2,6 +2,7 @@ package org.paytm.milestone2._Milestone2.controllers;
 
 import org.paytm.milestone2._Milestone2.DTO.Request.AddMoneyRequestBody;
 import org.paytm.milestone2._Milestone2.DTO.Request.WalletCreationRequestBody;
+import org.paytm.milestone2._Milestone2.Kafka.Producer;
 import org.paytm.milestone2._Milestone2.services.WalletService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,9 @@ public class WalletController {
     @Autowired
     WalletService walletService;
 
+    @Autowired
+    Producer producer;
+
     public String getUserNameFromToken(){
         String UserName = SecurityContextHolder.getContext().getAuthentication().getName();
         return UserName;
@@ -25,7 +29,12 @@ public class WalletController {
     @RequestMapping(value = "/wallet",method = RequestMethod.POST)
     public ResponseEntity<?> createWallet(@RequestBody WalletCreationRequestBody walletCreationRequestBody){
         String userNameFromToken = getUserNameFromToken();
-        return walletService.createWallet(walletCreationRequestBody,userNameFromToken);
+        ResponseEntity<?> response = walletService.createWallet(walletCreationRequestBody,userNameFromToken);
+        if(response.getStatusCodeValue()==200){
+            String msg = "Wallet created successfully for mobileNumber " + walletCreationRequestBody.getMobileNumber();
+            producer.publishToWalletTopic(msg);
+        }
+        return response;
     }
 
     @RequestMapping(value = "wallet/addmoney",method = RequestMethod.PUT)
