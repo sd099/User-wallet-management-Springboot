@@ -9,6 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class signInResponseBody {
+public class SignInResponseBody {
     String jwt;
 }

@@ -2,7 +2,7 @@ package org.paytm.milestone2._Milestone2.services;
 
 import org.paytm.milestone2._Milestone2.DTO.Request.SignInRequestBody;
 import org.paytm.milestone2._Milestone2.DTO.Response.MessageResponse;
-import org.paytm.milestone2._Milestone2.DTO.Response.signInResponseBody;
+import org.paytm.milestone2._Milestone2.DTO.Response.SignInResponseBody;
 import org.paytm.milestone2._Milestone2.models.User;
 import org.paytm.milestone2._Milestone2.repository.UserRepository;
 import org.paytm.milestone2._Milestone2.security.jwt.JwtUtil;
@@ -67,7 +67,7 @@ public class UserService {
             UserDetails userDetails=this.customUserDetailsService.loadUserByUsername(signInRequestBody.getUsername());
             String jwt =this.jwtUtil.generateToken(userDetails);
 
-            return ResponseEntity.ok(new signInResponseBody(jwt));
+            return ResponseEntity.ok(new SignInResponseBody(jwt));
         }
 
         catch (Exception exception) {
