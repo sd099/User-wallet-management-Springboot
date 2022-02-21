@@ -21,6 +21,7 @@ public class WalletService {
     @Autowired
     WalletRepository walletRepository;
 
+    //Create new wallet for user method
     public ResponseEntity<?> createWallet(WalletCreationRequestBody walletCreationRequestBody,String userNameFromToken){
 
         User user = userRepository.findByMobileNumber(walletCreationRequestBody.getMobileNumber());
@@ -51,6 +52,7 @@ public class WalletService {
 
     }
 
+    //add money into user wallet method
     public ResponseEntity<?> addMoneyIntoWallet(AddMoneyRequestBody addMoneyRequestBody,String userNameFromToken){
 
         User user = userRepository.findByMobileNumber(addMoneyRequestBody.getMobileNumber());

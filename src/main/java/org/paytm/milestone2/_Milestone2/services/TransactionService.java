@@ -29,6 +29,7 @@ public class TransactionService {
     @Autowired
     TransactionRepository transactionRepository;
 
+    //Create new transaction between two user(P2P) method
     public ResponseEntity<?> transactionP2P(TransactionP2pRequestBody transactionP2pRequestBody,String userNameFromToken){
         User payerName = userRepository.findByMobileNumber(transactionP2pRequestBody.getPayerMobileNumber());
 
@@ -92,6 +93,7 @@ public class TransactionService {
 
     }
 
+    //Get transaction by transaction id method
     public ResponseEntity<?> viewTransactionById(int txnId){
         Transaction transaction = transactionRepository.findById(txnId).orElse(null);
 
@@ -104,6 +106,7 @@ public class TransactionService {
         return ResponseEntity.ok(transaction);
     }
 
+    //Get all transaction by user id
     public ResponseEntity<?> viewTransactionByUserId(int userId,int pageNo,String userNameFromToken){
 
         User user = userRepository.findById(userId).orElse(null);

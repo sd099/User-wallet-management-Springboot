@@ -36,6 +36,7 @@ public class UserService {
     JwtUtil jwtUtil;
 
 
+    //Method for sign up user
     public ResponseEntity<?> signUpUser(User user){
         if(userRepository.findByUserName(user.getUserName())!=null){
             return ResponseEntity
@@ -58,7 +59,7 @@ public class UserService {
     }
 
 
-
+    //Method for sign in user
     public ResponseEntity<?> signInUser(SignInRequestBody signInRequestBody){
 
         try{
@@ -75,6 +76,5 @@ public class UserService {
                     .badRequest()
                     .body(new MessageResponse("Invalid credentials!"));
         }
-
     }
 }

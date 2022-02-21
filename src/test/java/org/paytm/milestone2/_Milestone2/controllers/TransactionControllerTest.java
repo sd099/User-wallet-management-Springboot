@@ -77,7 +77,7 @@ class TransactionControllerTest {
 
         String signInRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/signInRequestObject1.json")));
         String jwtForUser = generateTokenUsingLogin(signInRequestBody);
-        int txnId = 17;
+        int txnId = 36;
 
         MvcResult result= mockMvc.perform(MockMvcRequestBuilders.get("/transaction")
                         .header(HttpHeaders.AUTHORIZATION, "Bearer "+jwtForUser)
@@ -99,7 +99,7 @@ class TransactionControllerTest {
     void viewTransactionByUserId() throws Exception {
         String signInRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/signInRequestObject1.json")));
         String jwtForUser = generateTokenUsingLogin(signInRequestBody);
-        int userId = 11;
+        int userId = 32;
         int pageNo = 0;
 
         MvcResult result= mockMvc.perform(MockMvcRequestBuilders.get("/transaction/"+userId)

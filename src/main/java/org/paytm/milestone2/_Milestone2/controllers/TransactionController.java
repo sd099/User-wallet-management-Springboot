@@ -17,26 +17,38 @@ public class TransactionController {
     @Autowired
     Producer producer;
 
+    //Method to get username from jwt token
     public String getUserNameFromToken(){
         String UserName = SecurityContextHolder.getContext().getAuthentication().getName();
         return UserName;
     }
 
+    // @desc    New Transaction Creation
+    // @route   POST /transaction
+    // @access  Private(JWT access)
     @RequestMapping(value = "/transaction", method = RequestMethod.POST)
     public ResponseEntity<?> transactionP2P(@RequestBody TransactionP2pRequestBody transactionP2pRequestBody){
         String userNameFromToken = getUserNameFromToken();
         ResponseEntity<?> response =  transactionService.transactionP2P(transactionP2pRequestBody,userNameFromToken);
+
+        //If transaction creation is successfull push to transactionTopic in kafka
         if(response.getStatusCodeValue()==200){
             producer.publishToTransactionTopic(transactionP2pRequestBody.getAmount()+" Amount transferred from "+transactionP2pRequestBody.getPayerMobileNumber()+" to "+transactionP2pRequestBody.getPayeeMobileNumber());
         }
         return response;
     }
 
+    // @desc    Get Transaction By Transaction Id
+    // @route   GET /transaction?txnId=<txnId>
+    // @access  Private(JWT access)
     @RequestMapping(value = "/transaction", method = RequestMethod.GET)
     public ResponseEntity<?> viewTransactionById(@RequestParam("txnId") Integer txnId){
         return transactionService.viewTransactionById(txnId);
     }
 
+    // @desc    Get all transaction by userId and pageNo
+    // @route   GET //transaction/{userId}?pageNo=<pageNo>
+    // @access  Private(JWT access)
     @RequestMapping(value = "/transaction/{userId}", method = RequestMethod.GET)
     public ResponseEntity<?> viewTransactionByUserId(@PathVariable Integer userId, @RequestParam("pageNo") Integer pageNo){
         String userNameFromToken = getUserNameFromToken();
