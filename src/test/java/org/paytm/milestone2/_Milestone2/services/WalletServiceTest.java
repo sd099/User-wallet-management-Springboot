@@ -69,7 +69,7 @@ class WalletServiceTest {
         String addMoneyObject = new String(Files.readAllBytes(Paths.get("src/test/resources/addMoneyObject1.json")));
         AddMoneyRequestBody addMoneyRequestBody1 =objectMapper.readValue(addMoneyObject,AddMoneyRequestBody.class);
 
-        Wallet wallet = new Wallet(1,0.0F,addMoneyRequestBody1.getMobileNumber());
+        Wallet wallet = new Wallet(1,200.0F,addMoneyRequestBody1.getMobileNumber());
 
         Mockito.when(userRepository.findByMobileNumber(addMoneyRequestBody1.getMobileNumber())).thenReturn(user);
         Mockito.when(walletRepository.findByMobileNumber(addMoneyRequestBody1.getMobileNumber())).thenReturn(wallet);

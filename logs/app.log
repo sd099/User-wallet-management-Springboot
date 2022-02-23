@@ -1,0 +1,10 @@
+[DEBUG] 2022-02-23 20:13:14.392 [main] TransactionService - Transaction found with txnId = 24
+[DEBUG] 2022-02-23 20:13:14.452 [main] TransactionService - Transaction successfull
+[INFO ] 2022-02-23 20:13:14.453 [main] TransactionService - Details. Payer mobile number = 9876543210 payee mobile number = 0123456789 amount = 200.0
+[DEBUG] 2022-02-23 20:13:14.477 [main] TransactionService - Transaction found with userId = 1
+[DEBUG] 2022-02-23 20:14:02.706 [main] UserService - Money added successfully
+[INFO ] 2022-02-23 20:14:02.708 [main] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 0.0
+[DEBUG] 2022-02-23 20:14:02.784 [main] UserService - Wallet creation successfull
+[INFO ] 2022-02-23 20:14:02.784 [main] UserService - Wallet creation details. Mobile number = 9876543210
+[DEBUG] 2022-02-23 20:15:04.911 [main] UserService - Money added successfully
+[INFO ] 2022-02-23 20:15:04.913 [main] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 200.0
