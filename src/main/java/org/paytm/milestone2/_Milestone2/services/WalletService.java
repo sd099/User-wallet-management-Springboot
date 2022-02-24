@@ -95,11 +95,11 @@ public class WalletService {
                     .body(new MessageResponse("Error: Enter a positive value for money"));
         }
 
-        logger.debug("Money added successfully");
-        logger.info("Details. username = "+user.getUserName()+" mobile number = "+user.getMobileNumber()+" new balance = "+wallet.getCurrentBalance());
-
         wallet.setCurrentBalance(wallet.getCurrentBalance()+addMoneyRequestBody.getMoney());
         walletRepository.save(wallet);
+
+        logger.debug("Money added successfully");
+        logger.info("Details. username = "+user.getUserName()+" mobile number = "+user.getMobileNumber()+" new balance = "+wallet.getCurrentBalance());
 
         return ResponseEntity.ok(wallet);
     }
