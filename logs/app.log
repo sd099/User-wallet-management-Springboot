@@ -174,3 +174,26 @@
 [INFO ] 2022-02-24 18:58:34.863 [main] Application - No active profile set, falling back to default profiles: default
 [DEBUG] 2022-02-24 18:58:41.182 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
 [INFO ] 2022-02-24 18:58:44.584 [main] Application - Started Application in 10.183 seconds (JVM running for 11.364)
+[INFO ] 2022-02-24 19:00:44.563 [main] Application - Starting Application using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 8130 (/Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2/target/classes started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-02-24 19:00:44.578 [main] Application - Running with Spring Boot v2.6.2, Spring v5.3.14
+[INFO ] 2022-02-24 19:00:44.579 [main] Application - No active profile set, falling back to default profiles: default
+[DEBUG] 2022-02-24 19:00:50.668 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2022-02-24 19:00:54.053 [main] Application - Started Application in 9.983 seconds (JVM running for 11.344)
+[INFO ] 2022-02-24 19:14:47.371 [main] Application - Starting Application using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 9046 (/Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2/target/classes started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-02-24 19:14:47.376 [main] Application - Running with Spring Boot v2.6.2, Spring v5.3.14
+[INFO ] 2022-02-24 19:14:47.376 [main] Application - No active profile set, falling back to default profiles: default
+[DEBUG] 2022-02-24 19:14:53.590 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2022-02-24 19:14:56.768 [main] Application - Started Application in 9.848 seconds (JVM running for 11.034)
+[INFO ] 2022-02-24 19:26:45.816 [main] Application - Starting Application using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 9597 (/Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2/target/classes started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-02-24 19:26:45.861 [main] Application - Running with Spring Boot v2.6.2, Spring v5.3.14
+[INFO ] 2022-02-24 19:26:45.862 [main] Application - No active profile set, falling back to default profiles: default
+[DEBUG] 2022-02-24 19:26:52.064 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2022-02-24 19:26:55.178 [main] Application - Started Application in 9.805 seconds (JVM running for 10.993)
+[DEBUG] 2022-02-24 19:27:35.758 [http-nio-9010-exec-6] UserService - Sign in complete
+[INFO ] 2022-02-24 19:27:35.759 [http-nio-9010-exec-6] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-02-24 19:28:58.130 [http-nio-9010-exec-9] UserService - Money added successfully
+[INFO ] 2022-02-24 19:28:58.131 [http-nio-9010-exec-9] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 10000.0
+[DEBUG] 2022-02-24 19:29:06.539 [http-nio-9010-exec-10] UserService - Money added successfully
+[INFO ] 2022-02-24 19:29:06.539 [http-nio-9010-exec-10] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 15000.0
+[DEBUG] 2022-02-24 19:29:08.364 [http-nio-9010-exec-1] UserService - Money added successfully
+[INFO ] 2022-02-24 19:29:08.365 [http-nio-9010-exec-1] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 20000.0
