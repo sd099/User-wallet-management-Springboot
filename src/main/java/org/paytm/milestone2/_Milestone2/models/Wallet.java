@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -17,8 +14,8 @@ import javax.persistence.Id;
 @Setter
 public class Wallet {
     @Id
-    @GeneratedValue
-    @Column(name = "Wallet_Id")
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name="Wallet_Id", insertable=true, unique=true, nullable=false)
     private int walletId;
     @Column(name = "Current_Balance",nullable = false)
     private float currentBalance;

@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
@@ -17,8 +14,8 @@ import javax.persistence.Id;
 @Setter
 public class User {
     @Id
-    @GeneratedValue
-    @Column(name = "User_Id")
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name="User_Id", insertable=true, unique=true, nullable=false)
     int userId;
     @Column(name = "User_Name",nullable = false,unique = true)
     String userName;

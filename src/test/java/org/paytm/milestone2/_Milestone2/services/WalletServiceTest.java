@@ -43,10 +43,10 @@ class WalletServiceTest {
 
         String userNameFromToken = "Sd099";
 
-        String createWalletObject = new String(Files.readAllBytes(Paths.get("src/test/resources/createWalletRequestObject1.json")));
+        String createWalletObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/walletObjects/createWalletRequestObject1.json")));
         WalletCreationRequestBody walletCreationRequestBody1 =objectMapper.readValue(createWalletObject,WalletCreationRequestBody.class);
 
-        String userObject = new String(Files.readAllBytes(Paths.get("src/test/resources/userObject1.json")));
+        String userObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/userObjects/userObject1.json")));
         User user = objectMapper.readValue(userObject,User.class);
 
         Wallet wallet = new Wallet(1,0.0F,walletCreationRequestBody1.getMobileNumber());
@@ -63,10 +63,10 @@ class WalletServiceTest {
     void addMoneyIntoWallet() throws Exception {
         String userNameFromToken = "Sd099";
 
-        String userObject = new String(Files.readAllBytes(Paths.get("src/test/resources/userObject1.json")));
+        String userObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/userObjects/userObject1.json")));
         User user = objectMapper.readValue(userObject,User.class);
 
-        String addMoneyObject = new String(Files.readAllBytes(Paths.get("src/test/resources/addMoneyObject1.json")));
+        String addMoneyObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/walletObjects/addMoneyObject1.json")));
         AddMoneyRequestBody addMoneyRequestBody1 =objectMapper.readValue(addMoneyObject,AddMoneyRequestBody.class);
 
         Wallet wallet = new Wallet(1,200.0F,addMoneyRequestBody1.getMobileNumber());

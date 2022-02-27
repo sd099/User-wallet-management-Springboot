@@ -52,10 +52,10 @@ class TransactionServiceTest {
     void transactionP2P() throws Exception {
         String userNameFromToken = "Sd099";
 
-        String payerNameObject = new String(Files.readAllBytes(Paths.get("src/test/resources/userObject1.json")));
+        String payerNameObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/userObjects/userObject1.json")));
         User payerName = objectMapper.readValue(payerNameObject,User.class);
 
-        String transactionP2pRequestObject = new String(Files.readAllBytes(Paths.get("src/test/resources/transactionP2pRequestObject1.json")));
+        String transactionP2pRequestObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/transactionObjects/transactionP2pRequestObject1.json")));
         TransactionP2pRequestBody transactionP2pRequestBody = objectMapper.readValue(transactionP2pRequestObject,TransactionP2pRequestBody.class);
 
         Wallet payerWallet = new Wallet(1,5000,"9876543210");
@@ -85,7 +85,7 @@ class TransactionServiceTest {
     @Test
     @DisplayName("View transaction using transaction id")
     void viewTransactionById() throws Exception {
-        String transactionObj = new String(Files.readAllBytes(Paths.get("src/test/resources/transactionResObject1.json")));
+        String transactionObj = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/transactionObjects/transactionResObject1.json")));
         Transaction transaction = objectMapper.readValue(transactionObj,Transaction.class);
 
         Mockito.when(transactionRepository.findById(transaction.getTxnId())).thenReturn(Optional.of(transaction));
@@ -103,13 +103,13 @@ class TransactionServiceTest {
         String userNameFromToken = "Sd099";
         int pageNo = 0;
 
-        String transactionObj = new String(Files.readAllBytes(Paths.get("src/test/resources/transactionResObject1.json")));
+        String transactionObj = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/transactionObjects/transactionResObject1.json")));
         Transaction transaction = objectMapper.readValue(transactionObj,Transaction.class);
 
         List<Transaction> transactionsList = new ArrayList<>();
         transactionsList.add(transaction);
 
-        String userObject = new String(Files.readAllBytes(Paths.get("src/test/resources/userObject1.json")));
+        String userObject = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/userObjects/userObject1.json")));
         User user = objectMapper.readValue(userObject,User.class);
 
         Mockito.when(userRepository.findById(user.getUserId())).thenReturn(Optional.of(user));

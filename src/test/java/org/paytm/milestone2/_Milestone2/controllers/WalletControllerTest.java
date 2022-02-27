@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -22,7 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class WalletControllerTest {
 
     @Autowired
@@ -49,53 +49,37 @@ class WalletControllerTest {
 
     @Test
     @DisplayName("Create wallet tests")
-    @Order(1)
+    @Sql(statements = "insert into user (user_id,user_name,first_name,last_name,email_id,mobile_number,address_1,password) values (2000,\"Jd099\",\"John\",\"Doe\",\"johndoe@gmail.com\",\"0123456789\",\"Time square, NY, USA\",\"$2a$10$3IT1NBW1r60UtCPOXGlwweqmHJDwy3bsr4cuO4XkNnUguTtYgA8va\")\n", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     void createWallet() throws Exception{
 
-        String signInRequestBody1 = new String(Files.readAllBytes(Paths.get("src/test/resources/signInRequestObject1.json")));
-        String jwtForUser1 = generateTokenUsingLogin(signInRequestBody1);
-        String createWalletRequestBody1 = new String(Files.readAllBytes(Paths.get("src/test/resources/createWalletRequestObject1.json")));
+        String signInRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/userObjects/signInRequestObject2.json")));
+        String jwtForUser = generateTokenUsingLogin(signInRequestBody);
+        String createWalletRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/walletObjects/createWalletRequestObject2.json")));
 
-        MvcResult result1 = mockMvc.perform(MockMvcRequestBuilders.post("/wallet")
-                        .header(HttpHeaders.AUTHORIZATION, "Bearer "+jwtForUser1)
-                        .content(createWalletRequestBody1)
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.post("/wallet")
+                        .header(HttpHeaders.AUTHORIZATION, "Bearer "+jwtForUser)
+                        .content(createWalletRequestBody)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                         .andExpect(MockMvcResultMatchers.status().isOk())
                         .andReturn();
 
-        String resultAsString1 = result1.getResponse().getContentAsString();
-        MessageResponse response1 = objectMapper.readValue(resultAsString1,MessageResponse.class);
+        String resultAsString= result.getResponse().getContentAsString();
+        MessageResponse response = objectMapper.readValue(resultAsString,MessageResponse.class);
 
-        assertNotNull(result1);
-        assertEquals("Wallet Created Successfully!!",response1.getMessage());
+        assertNotNull(result);
+        assertEquals("Wallet Created Successfully!!",response.getMessage());
 
-
-        String signInRequestBody2 = new String(Files.readAllBytes(Paths.get("src/test/resources/signInRequestObject2.json")));
-        String jwtForUser2 = generateTokenUsingLogin(signInRequestBody2);
-        String createWalletRequestBody2 = new String(Files.readAllBytes(Paths.get("src/test/resources/createWalletRequestObject2.json")));
-
-        MvcResult result2 = mockMvc.perform(MockMvcRequestBuilders.post("/wallet")
-                        .header(HttpHeaders.AUTHORIZATION, "Bearer "+jwtForUser2)
-                        .content(createWalletRequestBody2)
-                        .contentType(MediaType.APPLICATION_JSON_VALUE))
-                        .andExpect(MockMvcResultMatchers.status().isOk())
-                        .andReturn();
-
-        String resultAsString2 = result2.getResponse().getContentAsString();
-        MessageResponse response2 = objectMapper.readValue(resultAsString2,MessageResponse.class);
-
-        assertNotNull(result2);
-        assertEquals("Wallet Created Successfully!!",response2.getMessage());
     }
 
     @Test
     @DisplayName("Add money into wallet tests")
-    @Order(2)
+    @Sql(statements = "insert into user (user_id,user_name,first_name,last_name,email_id,mobile_number,address_1,password) values (1000,\"Sd099\",\"Son\",\"Doe\",\"sondoe@gmail.com\",\"9876543210\",\"Time square, NY, USA\",\"$2a$10$hph6xo16D8ED1ZOHcMo7wuvrCH5ebxiVyTtPFGsHaZmIgAHWa55C2\")\n", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(statements = "insert into wallet (wallet_id,mobile_number,current_balance) values (1000,\"9876543210\",0.0)", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     void addMoneyIntoWallet() throws Exception {
 
-        String signInRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/signInRequestObject1.json")));
+        String signInRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/userObjects/signInRequestObject1.json")));
         String jwtForUser = generateTokenUsingLogin(signInRequestBody);
-        String addMoneyRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/addMoneyObject1.json")));
+        String addMoneyRequestBody = new String(Files.readAllBytes(Paths.get("src/test/resources/jsonObject/walletObjects/addMoneyObject1.json")));
 
         MvcResult result= mockMvc.perform(MockMvcRequestBuilders.put("/wallet/addmoney")
                         .header(HttpHeaders.AUTHORIZATION, "Bearer "+jwtForUser)
