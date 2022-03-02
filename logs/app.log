@@ -1,0 +1,10 @@
+[INFO ] 2022-03-01 16:27:49.356 [main] Application - Starting Application using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1731 (/Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2/target/classes started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 16:27:49.392 [main] Application - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 16:27:49.398 [main] Application - No active profile set, falling back to 1 default profile: "default"
+[DEBUG] 2022-03-01 16:27:56.043 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2022-03-01 16:27:59.597 [main] Application - Started Application in 10.858 seconds (JVM running for 12.155)
+[INFO ] 2022-03-01 17:10:59.505 [main] Application - Starting Application using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1967 (/Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2/target/classes started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:10:59.551 [main] Application - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:10:59.554 [main] Application - No active profile set, falling back to 1 default profile: "default"
+[DEBUG] 2022-03-01 17:11:06.328 [main] JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+[INFO ] 2022-03-01 17:11:09.639 [main] Application - Started Application in 10.731 seconds (JVM running for 12.656)

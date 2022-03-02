@@ -1,0 +1,263 @@
+[INFO ] 2022-03-01 16:26:44.908 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1512 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 16:26:44.913 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 16:26:44.914 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 16:26:56.139 [main] UserControllerTest - Started UserControllerTest in 11.69 seconds (JVM running for 14.905)
+[DEBUG] 2022-03-01 16:26:57.083 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:26:57.083 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 16:26:57.293 [main] UserService - Invalid credentials
+[DEBUG] 2022-03-01 16:26:57.400 [main] UserService - Username = Ss099 already exist. Different username required.
+[DEBUG] 2022-03-01 16:26:57.448 [main] UserService - Email = stevesmith@gmail.com already exist. Different email required
+[DEBUG] 2022-03-01 16:26:57.516 [main] UserService - Mobile Number = 5432109876 already exist. Different mobile number required
+[DEBUG] 2022-03-01 16:26:57.736 [main] UserService - Signup complete
+[INFO ] 2022-03-01 16:26:57.737 [main] UserService - signup details. username = Jd099 mobile number = 0123456789
+[INFO ] 2022-03-01 16:27:08.960 [main] WalletControllerTest - Starting WalletControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1586 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 16:27:08.966 [main] WalletControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 16:27:08.967 [main] WalletControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 16:27:20.633 [main] WalletControllerTest - Started WalletControllerTest in 12.108 seconds (JVM running for 14.75)
+[DEBUG] 2022-03-01 16:27:21.432 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:21.432 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 16:27:21.578 [main] UserService - User not found with the mobile number = 5432109876
+[DEBUG] 2022-03-01 16:27:21.732 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:21.732 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 16:27:21.808 [main] UserService - Money added successfully
+[INFO ] 2022-03-01 16:27:21.808 [main] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 5000.0
+[DEBUG] 2022-03-01 16:27:21.946 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:21.946 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 16:27:21.965 [main] UserService - Negative value entered for money. Positive value needed here.
+[DEBUG] 2022-03-01 16:27:22.103 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:22.103 [main] UserService - sign in details. Username = Jd099
+[DEBUG] 2022-03-01 16:27:22.130 [main] UserService - Wallet not found with the mobile number = 0123456789
+[DEBUG] 2022-03-01 16:27:22.287 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:22.287 [main] UserService - sign in details. Username = Jd099
+[ERROR] 2022-03-01 16:27:22.298 [main] UserService - Unauthorized user error
+[DEBUG] 2022-03-01 16:27:22.505 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:22.505 [main] UserService - sign in details. Username = Jd099
+[DEBUG] 2022-03-01 16:27:22.554 [main] UserService - Wallet creation successfull
+[INFO ] 2022-03-01 16:27:22.555 [main] UserService - Wallet creation details. Mobile number = 0123456789
+[DEBUG] 2022-03-01 16:27:22.938 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:22.938 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 16:27:22.961 [main] UserService - Unauthorized user error
+[DEBUG] 2022-03-01 16:27:23.115 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:23.115 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 16:27:23.135 [main] UserService - User already has a wallet with the mobile number = 9876543210
+[DEBUG] 2022-03-01 16:27:23.267 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:23.267 [main] UserService - sign in details. Username = Jd099
+[ERROR] 2022-03-01 16:27:23.284 [main] UserService - User not found with the mobile number = 5432109876
+[INFO ] 2022-03-01 16:27:31.885 [main] TransactionControllerTest - Starting TransactionControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1663 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 16:27:31.894 [main] TransactionControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 16:27:31.895 [main] TransactionControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-03-01 16:27:42.988 [main] TransactionControllerTest - Started TransactionControllerTest in 11.611 seconds (JVM running for 14.473)
+[DEBUG] 2022-03-01 16:27:43.740 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:43.741 [main] UserService - sign in details. Username = Ss099
+[ERROR] 2022-03-01 16:27:43.858 [main] TransactionService - User not found with userId = 4000
+[DEBUG] 2022-03-01 16:27:44.018 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:44.018 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 16:27:44.038 [main] TransactionService - Unauthorized user error
+[DEBUG] 2022-03-01 16:27:44.174 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:44.174 [main] UserService - sign in details. Username = Ss099
+[DEBUG] 2022-03-01 16:27:44.216 [main] TransactionService - Transaction found with userId = 3000
+[DEBUG] 2022-03-01 16:27:44.441 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:44.441 [main] UserService - sign in details. Username = Ss099
+[DEBUG] 2022-03-01 16:27:44.470 [main] TransactionService - Transaction found with txnId = 3000
+[DEBUG] 2022-03-01 16:27:44.603 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:44.603 [main] UserService - sign in details. Username = Ss099
+[ERROR] 2022-03-01 16:27:44.617 [main] TransactionService - Transaction not found with txnId = 2000
+[DEBUG] 2022-03-01 16:27:44.773 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 16:27:44.773 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 16:27:44.873 [main] TransactionService - Transaction successfull
+[INFO ] 2022-03-01 16:27:44.873 [main] TransactionService - Details. Payer mobile number = 9876543210 payee mobile number = 0123456789 amount = 200.0
+[INFO ] 2022-03-01 17:14:54.644 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:14:54.651 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:14:54.652 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:14:58.233 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:14:58.234 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:14:58.235 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:14:59.626 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:14:59.628 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:14:59.628 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:15:00.706 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:15:00.707 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:15:00.707 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:15:01.555 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:15:01.557 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:15:01.557 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:15:02.292 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:15:02.293 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:15:02.294 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:15:02.937 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:15:02.941 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:15:02.941 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:15:03.531 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2239 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:15:03.532 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:15:03.533 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:06.205 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:06.215 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:06.216 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:09.546 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:09.547 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:09.548 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:10.888 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:10.890 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:10.890 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:12.066 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:12.066 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:12.066 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:12.932 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:12.934 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:12.934 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:13.801 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:13.802 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:13.802 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:14.581 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:14.585 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:14.585 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:17:15.141 [main] UserControllerTest$signUpUser - Starting UserControllerTest.signUpUser using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2364 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:17:15.142 [main] UserControllerTest$signUpUser - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:17:15.143 [main] UserControllerTest$signUpUser - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:19:07.815 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2467 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:19:07.822 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:19:07.823 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:19:18.742 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2487 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:19:18.751 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:19:18.753 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:19:30.465 [main] UserControllerTest - Started UserControllerTest in 12.477 seconds (JVM running for 16.2)
+[DEBUG] 2022-03-01 17:19:31.186 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:19:31.186 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 17:19:31.357 [main] UserService - Invalid credentials
+[DEBUG] 2022-03-01 17:19:31.447 [main] UserService - Username = Ss099 already exist. Different username required.
+[DEBUG] 2022-03-01 17:19:31.491 [main] UserService - Email = stevesmith@gmail.com already exist. Different email required
+[DEBUG] 2022-03-01 17:19:31.539 [main] UserService - Mobile Number = 5432109876 already exist. Different mobile number required
+[DEBUG] 2022-03-01 17:19:31.737 [main] UserService - Signup complete
+[INFO ] 2022-03-01 17:19:31.737 [main] UserService - signup details. username = Jd099 mobile number = 0123456789
+[INFO ] 2022-03-01 17:19:47.436 [main] WalletControllerTest - Starting WalletControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2502 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:19:47.444 [main] WalletControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:19:47.445 [main] WalletControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 17:19:59.349 [main] WalletControllerTest - Started WalletControllerTest in 12.315 seconds (JVM running for 14.772)
+[DEBUG] 2022-03-01 17:20:00.190 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:00.190 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 17:20:00.317 [main] UserService - User not found with the mobile number = 5432109876
+[DEBUG] 2022-03-01 17:20:00.474 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:00.474 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 17:20:00.551 [main] UserService - Money added successfully
+[INFO ] 2022-03-01 17:20:00.551 [main] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 5000.0
+[DEBUG] 2022-03-01 17:20:00.683 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:00.683 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 17:20:00.703 [main] UserService - Negative value entered for money. Positive value needed here.
+[DEBUG] 2022-03-01 17:20:00.840 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:00.840 [main] UserService - sign in details. Username = Jd099
+[DEBUG] 2022-03-01 17:20:00.868 [main] UserService - Wallet not found with the mobile number = 0123456789
+[DEBUG] 2022-03-01 17:20:01.033 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:01.034 [main] UserService - sign in details. Username = Jd099
+[ERROR] 2022-03-01 17:20:01.058 [main] UserService - Unauthorized user error
+[DEBUG] 2022-03-01 17:20:01.270 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:01.270 [main] UserService - sign in details. Username = Jd099
+[DEBUG] 2022-03-01 17:20:01.313 [main] UserService - Wallet creation successfull
+[INFO ] 2022-03-01 17:20:01.314 [main] UserService - Wallet creation details. Mobile number = 0123456789
+[DEBUG] 2022-03-01 17:20:01.545 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:01.546 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 17:20:01.572 [main] UserService - Unauthorized user error
+[DEBUG] 2022-03-01 17:20:01.746 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:01.746 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 17:20:01.771 [main] UserService - User already has a wallet with the mobile number = 9876543210
+[DEBUG] 2022-03-01 17:20:01.921 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:01.921 [main] UserService - sign in details. Username = Jd099
+[ERROR] 2022-03-01 17:20:01.937 [main] UserService - User not found with the mobile number = 5432109876
+[INFO ] 2022-03-01 17:20:35.091 [main] TransactionControllerTest - Starting TransactionControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 2541 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 17:20:35.096 [main] TransactionControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 17:20:35.097 [main] TransactionControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-03-01 17:20:45.980 [main] TransactionControllerTest - Started TransactionControllerTest in 11.276 seconds (JVM running for 13.825)
+[DEBUG] 2022-03-01 17:20:46.747 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:46.747 [main] UserService - sign in details. Username = Ss099
+[ERROR] 2022-03-01 17:20:46.855 [main] TransactionService - User not found with userId = 4000
+[DEBUG] 2022-03-01 17:20:47.010 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:47.010 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 17:20:47.028 [main] TransactionService - Unauthorized user error
+[DEBUG] 2022-03-01 17:20:47.156 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:47.156 [main] UserService - sign in details. Username = Ss099
+[DEBUG] 2022-03-01 17:20:47.189 [main] TransactionService - Transaction found with userId = 3000
+[DEBUG] 2022-03-01 17:20:47.369 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:47.369 [main] UserService - sign in details. Username = Ss099
+[DEBUG] 2022-03-01 17:20:47.391 [main] TransactionService - Transaction found with txnId = 3000
+[DEBUG] 2022-03-01 17:20:47.524 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:47.524 [main] UserService - sign in details. Username = Ss099
+[ERROR] 2022-03-01 17:20:47.539 [main] TransactionService - Transaction not found with txnId = 2000
+[DEBUG] 2022-03-01 17:20:47.696 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 17:20:47.696 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 17:20:47.843 [main] TransactionService - Transaction successfull
+[INFO ] 2022-03-01 17:20:47.844 [main] TransactionService - Details. Payer mobile number = 9876543210 payee mobile number = 0123456789 amount = 200.0
+[INFO ] 2022-03-01 18:42:09.591 [main] ApplicationTests - Starting ApplicationTests using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1753 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 18:42:09.600 [main] ApplicationTests - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 18:42:09.602 [main] ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-03-01 18:42:23.895 [main] ApplicationTests - Started ApplicationTests in 14.778 seconds (JVM running for 19.018)
+[INFO ] 2022-03-01 18:42:24.585 [main] UserControllerTest - Starting UserControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1753 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 18:42:24.588 [main] UserControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 18:42:24.589 [main] UserControllerTest - The following 1 profile is active: "test"
+[INFO ] 2022-03-01 18:42:28.500 [main] UserControllerTest - Started UserControllerTest in 4.086 seconds (JVM running for 23.624)
+[DEBUG] 2022-03-01 18:42:29.208 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:29.208 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 18:42:29.470 [main] UserService - Invalid credentials
+[DEBUG] 2022-03-01 18:42:29.621 [main] UserService - Username = Ss099 already exist. Different username required.
+[DEBUG] 2022-03-01 18:42:29.670 [main] UserService - Email = stevesmith@gmail.com already exist. Different email required
+[DEBUG] 2022-03-01 18:42:29.716 [main] UserService - Mobile Number = 5432109876 already exist. Different mobile number required
+[DEBUG] 2022-03-01 18:42:29.988 [main] UserService - Signup complete
+[INFO ] 2022-03-01 18:42:29.989 [main] UserService - signup details. username = Jd099 mobile number = 0123456789
+[INFO ] 2022-03-01 18:42:30.176 [main] TransactionControllerTest - Starting TransactionControllerTest using Java 1.8.0_231 on PPBNOMBPBT-251.local with PID 1753 (started by swarnav.das in /Users/swarnav.das/Documents/Paytm Internship/Training Assignments/4_Milestone2)
+[DEBUG] 2022-03-01 18:42:30.178 [main] TransactionControllerTest - Running with Spring Boot v2.6.4, Spring v5.3.16
+[INFO ] 2022-03-01 18:42:30.178 [main] TransactionControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-03-01 18:42:32.744 [main] TransactionControllerTest - Started TransactionControllerTest in 2.659 seconds (JVM running for 27.868)
+[DEBUG] 2022-03-01 18:42:33.356 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:33.357 [main] UserService - sign in details. Username = Ss099
+[ERROR] 2022-03-01 18:42:33.537 [main] TransactionService - User not found with userId = 4000
+[DEBUG] 2022-03-01 18:42:33.711 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:33.711 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 18:42:33.742 [main] TransactionService - Unauthorized user error
+[DEBUG] 2022-03-01 18:42:33.878 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:33.878 [main] UserService - sign in details. Username = Ss099
+[DEBUG] 2022-03-01 18:42:33.926 [main] TransactionService - Transaction found with userId = 3000
+[DEBUG] 2022-03-01 18:42:34.126 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:34.126 [main] UserService - sign in details. Username = Ss099
+[DEBUG] 2022-03-01 18:42:34.159 [main] TransactionService - Transaction found with txnId = 3000
+[DEBUG] 2022-03-01 18:42:34.405 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:34.406 [main] UserService - sign in details. Username = Ss099
+[ERROR] 2022-03-01 18:42:34.458 [main] TransactionService - Transaction not found with txnId = 2000
+[DEBUG] 2022-03-01 18:42:34.656 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:42:34.656 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 18:42:34.776 [main] TransactionService - Transaction successfull
+[INFO ] 2022-03-01 18:42:34.776 [main] TransactionService - Details. Payer mobile number = 9876543210 payee mobile number = 0123456789 amount = 200.0
+[DEBUG] 2022-03-01 18:43:17.067 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:17.067 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 18:43:17.123 [main] UserService - User not found with the mobile number = 5432109876
+[DEBUG] 2022-03-01 18:43:17.271 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:17.271 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 18:43:17.323 [main] UserService - Money added successfully
+[INFO ] 2022-03-01 18:43:17.324 [main] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 5000.0
+[DEBUG] 2022-03-01 18:43:17.486 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:17.486 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 18:43:17.521 [main] UserService - Negative value entered for money. Positive value needed here.
+[DEBUG] 2022-03-01 18:43:17.695 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:17.695 [main] UserService - sign in details. Username = Jd099
+[DEBUG] 2022-03-01 18:43:17.719 [main] UserService - Wallet not found with the mobile number = 0123456789
+[DEBUG] 2022-03-01 18:43:17.909 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:17.909 [main] UserService - sign in details. Username = Jd099
+[ERROR] 2022-03-01 18:43:17.957 [main] UserService - Unauthorized user error
+[DEBUG] 2022-03-01 18:43:18.288 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:18.289 [main] UserService - sign in details. Username = Jd099
+[DEBUG] 2022-03-01 18:43:18.379 [main] UserService - Wallet creation successfull
+[INFO ] 2022-03-01 18:43:18.380 [main] UserService - Wallet creation details. Mobile number = 0123456789
+[DEBUG] 2022-03-01 18:43:18.598 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:18.598 [main] UserService - sign in details. Username = Sd099
+[ERROR] 2022-03-01 18:43:18.630 [main] UserService - Unauthorized user error
+[DEBUG] 2022-03-01 18:43:18.767 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:18.767 [main] UserService - sign in details. Username = Sd099
+[DEBUG] 2022-03-01 18:43:18.791 [main] UserService - User already has a wallet with the mobile number = 9876543210
+[DEBUG] 2022-03-01 18:43:18.917 [main] UserService - Sign in complete
+[INFO ] 2022-03-01 18:43:18.918 [main] UserService - sign in details. Username = Jd099
+[ERROR] 2022-03-01 18:43:18.931 [main] UserService - User not found with the mobile number = 5432109876
+[DEBUG] 2022-03-01 18:43:19.720 [main] TransactionService - Transaction found with txnId = 24
+[DEBUG] 2022-03-01 18:43:19.748 [main] TransactionService - Transaction successfull
+[INFO ] 2022-03-01 18:43:19.748 [main] TransactionService - Details. Payer mobile number = 9876543210 payee mobile number = 0123456789 amount = 200.0
+[DEBUG] 2022-03-01 18:43:19.768 [main] TransactionService - Transaction found with userId = 1
+[DEBUG] 2022-03-01 18:43:19.811 [main] UserService - Money added successfully
+[INFO ] 2022-03-01 18:43:19.811 [main] UserService - Details. username = Sd099 mobile number = 9876543210 new balance = 5200.0
+[DEBUG] 2022-03-01 18:43:19.824 [main] UserService - Wallet creation successfull
+[INFO ] 2022-03-01 18:43:19.824 [main] UserService - Wallet creation details. Mobile number = 9876543210
